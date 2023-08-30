@@ -1,91 +1,121 @@
-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family:Tahoma, sans-serif;
-    height: 100vh;
-    overflow: hidden;
-    color: white;
-    background-color: whitesmoke;
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
 }
+body{
+    padding: 5%;
+    color: #fff;
+}
+/* container */
 .card{
     /* border: 2px solid red; */
-    
+
     height: 250px;
     width: 250px;
+    padding: 3% 3%;
+    background-color: #1e1e1e;
+
     position: relative;
-    display: block;
-    box-shadow: 5px 5px 20px black;
-    background-color: rgb(0, 0, 0,0.30);
-}
-.card-title{
-    /* border: 2px solid yellow; */
+    overflow: hidden;
+    cursor: pointer;
+    transition: all ease-out .3s;
 
-    height: 100%;
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5em;
-    background-color: transparent;
-    z-index: 5;
-    
-
-}
-.card-title span{
-    font-size: 15px;
-    font-weight: 800;
 }
 img{
-    height: 100px;
-    width: 100px;
-    border-radius:100%;
-    transition: all ease-out 1s;
-}
-.card-content{
-    /* border: 2px solid yellowgreen; */
+    height: 200px;
+    width: 250px;
+    transition: all ease-out .3s;
 
-    color: black;
-    background-color: rgba(246, 214, 51, 0.75);
+}
+h2{
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-left: 20%;
+    /* transition: all ease-out .3s; */
+
+}
+p{
+    font-size: 12px;
+    font-weight: 500;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.btn{
+    border: 1px solid #1e1e1e;
+    background-color: #1e1e1e;
+    font-size: 12px;
+    border-radius: 20px;
+    margin-top: 10px;
+    width: 90px;
+    padding: 4px 15px;
+    margin-left: 50%;
+
+    transition: all ease-out .3s;
+
+}
+.card-bg{
     height: 2%;
-    width: fit-content;
-    position: absolute;
+    background-color: #FFC641;
+    
     bottom: 0;
     left: 0;
     right: 0;
-    overflow: hidden;
-    font-size: 12px;
-    transition: all ease-out 1s;
-}
-.card-content p{
-    margin-top: 30%;
-}
-.card-content a{
-    text-decoration: none;
+    position: absolute;
+    z-index: 1;
+    transition: all ease-out .3s;
+
 }
 
-.card:hover img{
-    height: auto;
-    width: 40px;
-    z-index: 5;
-}
-.card:hover .card-title{
+.header {
     /* border: 2px solid yellowgreen; */
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 5px;
-    color: black;
+    height: 80px;
+    width: auto;
+    z-index: 1;
+}
+.content-body{
+    /* border: 2px solid orange; */
+        padding: 10px 10px;
+        opacity: 0;
+        z-index: 1;
+        transition: all ease-out .3s;
+
 }
 
-.card:hover .card-content{
-    /* border: 2px solid yellow; */
-    
-    height: 250px;
-    width: fit-content;
+.content{
+    border: 2px solid yellow;
+
+    width: 100%;
+
+    display: grid;
+    grid-template: 0fr 0.5fr;
+    gap: 5px;
+    transition: all ease-out .3s;
+
+}
+
+
+/* hover -------->> */
+
+.card:hover .card-bg{
+    height: 100%;
+    z-index: 0;
+}
+.card:hover img{
+    height: 50px;
+    width: 50px;
+    padding-left: 10px;
+}
+.card:hover h2{
+    margin-left: 10px;
+    color: #1e1e1e;
+}
+
+.card:hover .content-body{
+    opacity: 1;
+    padding-top: 5px;
+    color: #1e1e1e;
 }
