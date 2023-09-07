@@ -5,16 +5,16 @@
 }
 body{
     padding: 5%;
-    color: #fff;
+    color: #1e1e1e;
 }
 /* container */
 .card{
-    /* border: 2px solid red; */
+    border: 2px solid red;
 
     height: 250px;
     width: 250px;
     padding: 3% 3%;
-    background-color: #1e1e1e;
+    background-color: #fff;
 
     position: relative;
     overflow: hidden;
@@ -22,12 +22,15 @@ body{
     transition: all ease-out .3s;
 
 }
+
 img{
+    border: 2px solid yellow;
+
     height: 200px;
     width: 250px;
     transition: all ease-out .3s;
-
 }
+/* no need transistions */
 h2{
     font-size: 16px;
     font-weight: 700;
@@ -44,6 +47,7 @@ a{
     text-decoration: none;
     color: #fff;
 }
+/* no transistions */
 .btn{
     border: 1px solid #1e1e1e;
     background-color: #1e1e1e;
@@ -54,7 +58,7 @@ a{
     padding: 4px 15px;
     margin-left: 50%;
 
-    transition: all ease-out .3s;
+    /* transition: all ease-out .3s; */
 
 }
 .card-bg{
@@ -71,13 +75,13 @@ a{
 }
 
 .header {
-    /* border: 2px solid yellowgreen; */
+    border: 2px solid yellowgreen;
     height: 80px;
     width: auto;
     z-index: 1;
 }
 .content-body{
-    /* border: 2px solid orange; */
+        /* border: 2px solid orange; */
         padding: 10px 10px;
         opacity: 0;
         z-index: 1;
@@ -86,7 +90,7 @@ a{
 }
 
 .content{
-    border: 2px solid yellow;
+    /* border: 2px solid yellow; */
 
     width: 100%;
 
@@ -115,6 +119,7 @@ a{
 }
 
 .card:hover .content-body{
+    border: 2px solid yellow;
     opacity: 1;
     padding-top: 5px;
     color: #1e1e1e;
