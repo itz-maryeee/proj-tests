@@ -1,4 +1,4 @@
-.row{
+ .row{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -20,7 +20,6 @@
 
     transition: all ease-out 1s;
 }
-
 
 .card-content-body{
     /* border: 2px solid rgb(0, 255, 34); */
@@ -94,5 +93,154 @@
 }
 
 .card:hover .card-body{
+    opacity: 1;
+}   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    font-weight: 400;
+    padding-inline: 2rem;
+    margin: 0 auto;
+}
+/* images */
+img{
+    display: block;
+}
+.card-img{
+    width: 400px;
+    height: 400px;
+    display: block;
+}
+.card-title-img{
+    width: 40px; 
+    border: 1px solid #fff;
+}
+/* texts */
+h1{
+    font-size: 28px;
+    font-weight: 600;
+    margin: 1% 0;
+}
+p{
+    font-size: 14px;
+    padding: 5% 0 10%;
+    line-height: 1.5;
+}
+/* buttons */
+.btn-link {
+    text-decoration: none;
+    border: 1px solid yellow;
+    background-color: yellow;
+    padding: 6px 18px;
+    border-radius: 5px;
+    text-align: center;
+    color: #1e1e1e;
+    font-weight: 600;
+}
+/* 
+.row{
+    margin-top: 3%;
+
+} */
+/* card */
+.card2{
+    width: 400px;
+    margin-bottom: 20%;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+
+    transition: all ease-out 1s;
+}
+
+.card-content2{
+    /* border: 2px solid blue; */
+
+    width: 100%;
+
+    display: grid;
+    grid-template-rows: 0.5fr 1.5fr;
+    gap: 10;
+    color: #fff;
+
+    position: absolute;
+    top: 75%;
+    left: 0;
+    right: 0;
+
+    transform: translate(-50,-50);
+    transition: all ease-out 1s;
+}
+
+    .card-title2{
+        /* border: 2px solid magenta; */
+ 
+        color: #fff;
+        padding: 8px 0 0 10px;   
+        transition: all ease-out 4s;
+
+
+    }
+
+    .card-body2{
+
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5% 5%;
+        background: transparent;
+
+        transition: all ease-out 1s;
+    }
+        .card-body2 .card-body-title, .btn-link{
+            align-self: center;
+        }
+        .card-body2 .card-body-title{
+            color: yellow;
+            transition: all ease-out .8s;
+        }
+        .card-body2 .card-body-text{
+            margin: 3% 5%;
+        }
+
+
+
+.card2:hover .card-img{
+    filter: grayscale(1) brightness(50%);
+
+}
+.card:hover .card-title2{
+    width: 100%;
+}
+.card2:hover .card-content2{
+
+    top: -28%;
+}
+.card2:hover .card-title2{
+    color: #fff;
+}
+.card2:hover .card-body2{
+    padding: 5% 5%;
     opacity: 1;
 }
